@@ -1,172 +1,25 @@
-/*==============================================================================
+/*====================================================================
 RESET
-==============================================================================*/
+====================================================================*/
 @import '../stylereset/reset.styl'
 
-/*==============================================================================
+/*====================================================================
 Global Styles
-==============================================================================*/
+====================================================================*/
 @import '../globalstyles/styles.styl'
 
-/*==============================================================================
+/*====================================================================
 Including other components
-==============================================================================*/
+====================================================================*/
 @import '../allmodules/allstyles.styl'
 
+@import 'components/backgroundmenu/backgroundmenu.styl'
+@import 'components/backgroundimage/backgroundimage.styl'
+@import 'components/vision/vision.styl'
+@import 'components/organisation/organisation.styl'
+@import 'components/code/code.styl'
 
-#title-overlays
-    position: absolute
-    top 0
-    left 0
-    width: 100%
-    height 100vh
+main
+    position relative
+    margin-top calc(100vh - 100px)
     z-index: 2
-    pointer-events: none
-
-#vision
-    color cd-blue-light
-#collaborate
-    color cd-green-light
-#organization
-    color cd-red-light
-
-#homepage
-    background-color yellow
-    position absolute
-    top 0
-    left 0
-    width: 100%
-    height 100vh
-    z-index 1
-    foreignObject
-        width 150px
-        height 50px
-
-#great-logo:hover
-    transition all 0.3s
-    transform-origin 50% 50%
-    transform scale(2)
-
-
-#bottom-segment
-    transition all 0.3s
-    cursor pointer
-    fill cd-red-dark
-// #bottom-slice
-//     fill cd-red-light
-
-#bottom-segment:hover
-    cursor pointer
-    fill cd-red-light
-
-
-#left-segment
-    transition all 0.3s
-    cursor pointer
-    fill cd-blue-dark
-
-// #left-slice
-//     fill cd-blue-light
-
-#left-segment:hover
-    cursor pointer
-    fill cd-blue-light
-
-#right-segment
-    transition all 0.3s
-    cursor pointer
-    fill cd-green-dark
-
-// #right-slice
-//     fill cd-green-light
-
-#right-segment:hover
-    cursor pointer
-    fill cd-green-light
-
-
-.flash
-    fill #ee8822
-
-
-
-
-// .section
-//     padding 50px
-    
-//     h1
-//         margin-bottom: 10px
-//         margin-top: 30px
-
-// #light
-//     background-color: cd-background-light
-//     color: cd-foreground-dark
-//     .red
-//         color cd-red-dark
-//     .green
-//         color cd-green-dark
-//     .blue
-//         color cd-blue-dark
-// #red-light
-//     background-color: cd-red-light
-//     color: cd-foreground-dark
-//     .red
-//         color cd-red-dark
-//     .green
-//         color cd-green-dark
-//     .blue
-//         color cd-blue-dark
-// #green-light
-//     background-color: cd-green-light
-//     color: cd-foreground-dark
-//     .red
-//         color cd-red-dark
-//     .green
-//         color cd-green-dark
-//     .blue
-//         color cd-blue-dark
-// #blue-light
-//     background-color: cd-blue-light
-//     color: cd-foreground-dark
-//     .red
-//         color cd-red-dark
-//     .green
-//         color cd-green-dark
-//     .blue
-//         color cd-blue-dark
-
-
-
-// #dark
-//     .red
-//         color cd-red-light
-//     .green
-//         color cd-green-light
-//     .blue
-//         color cd-blue-light
-
-// #red-dark
-//     background-color: cd-red-dark
-//     .red
-//         color cd-red-light
-//     .green
-//         color cd-green-light
-//     .blue
-//         color cd-blue-light
-// #green-dark
-//     background-color: cd-green-dark
-//     .red
-//         color cd-red-light
-//     .green
-//         color cd-green-light
-//     .blue
-//         color cd-blue-light
-
-// #blue-dark
-//     background-color: cd-blue-dark
-//     .red
-//         color cd-red-light
-//     .green
-//         color cd-green-light
-//     .blue
-//         color cd-blue-light
