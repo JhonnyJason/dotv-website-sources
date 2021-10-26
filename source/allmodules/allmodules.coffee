@@ -3,7 +3,7 @@ import debugmodule from "./debugmodule"
 
 Modules = {
     configmodule,
-    debugmodule
+    debugmodule,
 }
 
 export default Modules
