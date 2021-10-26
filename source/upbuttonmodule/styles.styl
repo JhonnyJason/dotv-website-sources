@@ -1,0 +1,27 @@
+// upbutton styles
+upbutton-size = 50px
+side-padding = 20px
+container-height = upbutton-size + side-padding
+
+#upbutton-container
+    height: container-height
+    width: 100%
+    position: fixed
+    bottom 0
+    text-align: right
+    z-index 3
+    transform translate(0, 100px)
+    transition transform 0.5s
+
+#upbutton-container.here
+    transform translate(0, 0)
+    
+
+#upbutton
+    margin-right side-padding
+    width upbutton-size
+    height upbutton-size
+    cursor pointer
+    border-radius 50%
+    box-shadow 0 0 1em black
+    background-color black

@@ -4,10 +4,33 @@ domconnect.initialize()
 
 global.allModules = Modules
 
+counter = 0
+releaseId = 0
+
+############################################################
+contract = ->
+    backgroundlogo.classList.add("small")
+    return
+
+release = ->
+    backgroundlogo.classList.remove("small")
+    return
+
+evaluate = ->
+    if counter > 100
+        contract()
+        if releaseId then clearTimeout(releaseId)
+        releaseId = setTimeout(release, 2000)
+    counter = 0
+    return
+
+
+moved = -> counter++
+
 ############################################################
 appStartup = ->
-    ## which modules shall be kickstarted?
-    # Modules.appcoremodule.startUp()
+    document.addEventListener("mousemove", moved)
+    setInterval(evaluate, 1000)
     return
 
 ############################################################

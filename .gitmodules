@@ -1,0 +1,3 @@
+[submodule "source/vanillautilmodule"]
+	path = source/vanillautilmodule
+	url = git@github.com:JhonnyJason/pwa-sources-vanillautilmodule.git
