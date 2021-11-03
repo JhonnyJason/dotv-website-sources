@@ -8,31 +8,18 @@ section#company
                 p Harju maakond, Tallinn,<br>
                     | Kesklinna linnaosa, Narva mnt 7,<br>
                     | 10117, Estonia
-            #estonian-flag
-                .estonian-blue
-                .black-strip 
-                .white-strip
+            .flags-line
+                .estonian-flag
+                    .estonian-blue
+                    .black-strip 
+                    .white-strip
     .block
         .max-content
-            p.todo // TODO: Add Informations and beautiful Statistics here
+            p.todo // TODO: Add information and beautiful statistics here
             h2 The Developing Developers
-            #founder-block
-                #top-block
-                    img#avatar(src="/img/unsplash/mea.JPG")
-                    #middle-block
-                        h3 Lenard Frommelt
-                        p Supervisor of Systems <br>Evolution (SoSE)
-                        p Mentor / Student
-                    #right-block
-                        #linkedin-link
-                        #github-link
-                #other-flags
-                    svg#swiss-flag: use(href="#svg-swiss-flag-icon")                    
-                    svg#liechtenstein-flag: use(href="#svg-liechtenstein-flag-icon")
-                    #austrian-flag
-                        .austrian-red
-                        .white-strip
-                        .austrian-red
+            include dev-card1.pug
+            include dev-card2.pug 
+            include dev-card3.pug
     .gap
         p We are not legion, we do forgive.<br>
             | But we never forget.<br>

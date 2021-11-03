@@ -7,8 +7,12 @@
     max-width: none
     background-color #eee
 
-#estonian-flag
+.flags-line
+    display flex
     width 50%
+    
+.flags-line > *
+    flex-grow: 1
 
 .estonian-blue
     background-color: #0072CE
@@ -25,46 +29,15 @@
     background-color white
     height 10px
 
-#avatar
-    border-radius: 50%
-    width: 200px
-#top-block
-    display flex
-    margin-bottom 20px
-#founder-block
-    background-color: #eee
-    padding 20px
-    border-radius: 3px
-    margin-bottom 56px
-
-#middle-block
-    text-align right
-    margin-left: 60px
-#right-block
-    background-color black
-
-#other-flags
-    display flex
-    width 50%
-
-#swiss-flag
+.swiss-flag
     position relative
     background-color: red
     color white
     height 30px
     width 30px
 
-#swiss-cross
-    font-weight bold
-    font-size: 40px
-    position absolute
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
-
-#liechtenstein-flag
+.liechtenstein-flag
     height 30px
     width 50px
 
-#austrian-flag
-    flex-grow: 2
+@import "developer.styl"

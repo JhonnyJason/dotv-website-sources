@@ -6,6 +6,7 @@ indexdomconnect.initialize = () ->
     global.mission = document.getElementById("mission")
     global.company = document.getElementById("company")
     global.upbuttonContainer = document.getElementById("upbutton-container")
+    global.backgroundimage = document.getElementById("backgroundimage")
     global.backgroundlogo = document.getElementById("backgroundlogo")
     return
     

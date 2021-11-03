@@ -12,6 +12,11 @@ print = (arg) -> console.log(arg)
 ############################################################
 v = null
 
+timerID = 0
+timeoutMS = 1000
+
+shown  = false
+
 ############################################################
 upbuttonmodule.initialize = () ->
     log "upbuttonmodule.initialize"
@@ -22,15 +27,26 @@ upbuttonmodule.initialize = () ->
 ############################################################
 scrollToTop = (evt) ->
     v.scrollTo(0)
+    backgroundlogo.classList.add("big-and-clear")
+    if timerID then clearTimeout(timerID)
+    timerID = setTimeout(clearBackground, timeoutMS)
+    return
+
+clearBackground = ->
+    backgroundlogo.classList.remove("big-and-clear")
     return
 
 ############################################################
 upbuttonmodule.show = ->
+    return if shown
     upbuttonContainer.classList.add("here")
+    shown = true
     return
 
 upbuttonmodule.hide = ->
+    return unless shown
     upbuttonContainer.classList.remove("here")
+    shown = false
     return
 
 module.exports = upbuttonmodule

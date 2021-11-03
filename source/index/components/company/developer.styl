@@ -1,0 +1,80 @@
+.developer-card
+    background-color: #eee
+    padding 20px
+    border-radius: 3px
+    margin-bottom 56px
+
+.main-content-block
+    display flex
+    margin-bottom 20px
+    flex-wrap: wrap
+
+.avatar
+    flex-shrink: 0
+    border-radius: 50%
+    width: 200px
+    height 200px
+    overflow: hidden
+
+.middle-block
+    flex-shrink: 0
+    text-align right
+    margin-left: 60px
+    width: 220px
+
+.right-block
+    margin-left auto
+    margin-top auto
+    text-align: right
+    position relative
+    a
+        text-decoration: none
+        margin-right 7px
+    svg
+        width 50px
+        height 50px
+
+/*====================================================================
+mobile styles
+====================================================================*/
+@media screen and (max-width: 570px)
+    .main-content-block
+        flex-direction column
+    .avatar
+        margin auto
+        margin-bottom 30px
+    .middle-block
+        text-align: center
+        margin auto 
+
+    .right-block
+        text-align: center
+        margin-left: 0
+    
+    .flags-line
+        width: 100%
+
+/*====================================================================
+specific styles
+====================================================================*/
+#lenny-avatar
+    width inherit
+#lenny-flags
+    display: flex
+    .austrian-flag
+        flex-grow: 1
+#json-avatar
+    width inherit
+    background-image: url("/img/avatar-bg.jpg")
+    background-size: cover
+    height inherit
+    color black
+
+#gson-avatar
+    width inherit
+    background-image: url("/img/avatar2-bg.jpg")
+    background-size: cover
+    height inherit
+    color black
+
+

@@ -14,6 +14,10 @@ v = null
 headerHeight = 0
 upButton = null
 
+offsetForFooter = 0
+footerShown = false
+
+
 ############################################################
 smoothscrolleffectmodule.initialize = () ->
     log "smoothscrolleffectmodule.initialize"
@@ -26,6 +30,9 @@ smoothscrolleffectmodule.initialize = () ->
         if anchorname then addScrollEffect(link, anchorname)
     document.addEventListener("scroll", weScrolled)
     getHeaderHeight()
+
+    fullHeight = document.body.offsetHeight
+    offsetForFooter = fullHeight - 1.8 * screen.height
     return
     
 ############################################################
@@ -55,6 +62,10 @@ weScrolled = (evt) ->
     offset = window.scrollY
     if offset > 500 then upButton.show()
     else upButton.hide()
+
+    if !footerShown and offset > offsetForFooter
+        backgroundimage.classList.add("footer")
+        footerShown = true
     return
 
 ############################################################
