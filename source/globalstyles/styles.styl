@@ -24,6 +24,8 @@ max-content-width = 1024px
 inner-content-width = 750px
 mobile-side-padding = 15px
 
+element-background = #0249
+
 /*==========================================================
 General Tag Styles
 ==========================================================*/
@@ -95,6 +97,7 @@ paddingless-inner-content-width = (inner-content-width + (2 * mobile-side-paddin
 
 
 .block
+    position relative
     padding 56px 0
     background-color white
     color #024
@@ -102,6 +105,7 @@ paddingless-inner-content-width = (inner-content-width + (2 * mobile-side-paddin
     // opacity: 0.6
     
 .black-block
+    position relative
     padding 56px 0
     background-color alpha(black, 0.6)
     color white
@@ -115,6 +119,17 @@ paddingless-inner-content-width = (inner-content-width + (2 * mobile-side-paddin
     color white
     text-align: left
     // opacity: 0.97
+
+.one-line-centered-block
+        p   
+            margin auto
+            text-align: center
+
+.multi-line-centered-block
+        p   
+            margin-left auto
+            margin-right auto
+            text-align: center
 
 .gap
     position relative

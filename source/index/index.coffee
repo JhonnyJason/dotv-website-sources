@@ -4,33 +4,52 @@ domconnect.initialize()
 
 global.allModules = Modules
 
-counter = 0
-releaseId = 0
+utl = Modules.utilmodule
 
 ############################################################
-contract = ->
-    backgroundlogo.classList.add("small")
+showBitcoinInformation = ->
+    donationInformation.classList.remove("sepa-information-shown")
+    donationInformation.classList.remove("ethereum-information-shown")
+    donationInformation.classList.add("bitcoin-information-shown")
     return
 
-release = ->
-    backgroundlogo.classList.remove("small")
+showEthereumInformation = ->
+    donationInformation.classList.remove("sepa-information-shown")
+    donationInformation.classList.add("ethereum-information-shown")
+    donationInformation.classList.remove("bitcoin-information-shown")
     return
 
-evaluate = ->
-    if counter > 100
-        contract()
-        if releaseId then clearTimeout(releaseId)
-        releaseId = setTimeout(release, 2000)
-    counter = 0
+showSepaInformation = ->
+    donationInformation.classList.add("sepa-information-shown")
+    donationInformation.classList.remove("ethereum-information-shown")
+    donationInformation.classList.remove("bitcoin-information-shown")
     return
 
+copyBitcoinAddress = ->
+    address = bitcoinAddress.textContent
+    utl.copyToClipboard(address)
+    return
 
-moved = -> counter++
+copyEthereumAddress = ->
+    address = ethereumAddress.textContent
+    utl.copyToClipboard(address)
+    return
+
+copyIbanAddress = ->
+    address = ibanAddress.textContent
+    utl.copyToClipboard(address)
+    return
+
 
 ############################################################
 appStartup = ->
-    document.addEventListener("mousemove", moved)
-    setInterval(evaluate, 1000)
+    donateBitcoinButton.addEventListener("click", showBitcoinInformation)
+    donateEthereumButton.addEventListener("click", showEthereumInformation)
+    donateSepaButton.addEventListener("click", showSepaInformation)
+    
+    copyBitcoinAddressButton.addEventListener("click", copyBitcoinAddress)
+    copyEthereumAddressButton.addEventListener("click", copyEthereumAddress)
+    copyIbanAddressButton.addEventListener("click", copyIbanAddress)
     return
 
 ############################################################

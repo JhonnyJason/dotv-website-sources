@@ -1,3 +1,5 @@
+@import "developer.styl"
+
 .todo
     text-align: center
     width 100%
@@ -17,6 +19,7 @@
 .estonian-blue
     background-color: #0072CE
     height 10px
+
 .austrian-red
     background-color: #C8102E
     height 10px
@@ -40,4 +43,145 @@
     height 30px
     width 50px
 
-@import "developer.styl"
+
+#sprout-top
+    position absolute
+    bottom -1px
+    left calc(50% + 150px)
+    width 210px
+
+#sprout-bottom
+    position absolute
+    top -2px
+    left calc(50% - 21px + 150px)
+    width 210px
+
+#donation-block
+    margin-top 70px
+    margin-bottom 50px
+
+#donation-buttons
+    display: flex
+    justify-content: space-around
+
+#donation-information
+    height 150px
+    position relative
+    
+#donation-information > * 
+    max-width calc(100% - 20px)
+    overflow hidden
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    p
+        margin auto
+        text-align: center
+        margin-bottom 10px
+
+#donation-buttons > *
+    height 100px
+    width 100px
+    cursor: pointer
+
+#bitcoin-information,
+#ethereum-information,
+#sepa-information
+    display none
+
+#donation-information.bitcoin-information-shown
+    #bitcoin-information
+        display block
+
+#donation-information.ethereum-information-shown
+    #ethereum-information
+        display block
+
+#donation-information.sepa-information-shown
+    #sepa-information
+        display block
+
+#copy-iban-address-button
+    max-width 100%
+    box-sizing: border-box
+    display: flex
+    background-color #0243
+    border-radius 30px
+    padding 10px 20px
+    cursor pointer
+    margin-bottom: 10px
+    svg
+        flex-shrink: 0
+        width 18px
+        height 18px
+        margin-left 20px
+
+#copy-bitcoin-address-button
+    max-width 100%
+    box-sizing: border-box
+    display: flex
+    background-color #0243
+    border-radius 30px
+    padding 10px 20px
+    cursor pointer
+    svg
+        flex-shrink: 0
+        width 18px
+        height 18px
+        margin-left 20px
+
+#copy-ethereum-address-button
+    max-width 100%
+    box-sizing: border-box
+    display: flex
+    background-color #0243
+    border-radius 30px
+    padding 10px 20px
+    cursor pointer
+    svg
+        flex-shrink: 0
+        width 18px
+        height 18px
+        margin-left 20px
+
+#iban-address
+    display inline-block
+    flex-shrink: 2
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+
+#bitcoin-address
+    display inline-block
+    flex-shrink: 2
+    text-overflow: ellipsis
+    overflow: hidden
+
+#ethereum-address
+    display inline-block
+    flex-shrink: 2
+    text-overflow: ellipsis
+    overflow: hidden
+
+
+#claim-block
+    background-image url(/img/flower-of-life.svg)
+    background-size: contain
+    background-repeat: no-repeat
+    background-position center
+    padding-top: 70px
+    padding-bottom 70px
+    
+@media screen and (max-width: 750px)
+    #sprout-top
+        right 50px
+        left auto
+
+    #sprout-bottom
+        right 71px
+        left auto
+    #funding-part1
+        margin-bottom 200px
+    #funding-part2
+        margin-top 200px
