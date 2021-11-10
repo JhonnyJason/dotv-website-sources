@@ -1,13 +1,18 @@
 extends developerbase.pug 
 block picture
-    svg#json-avatar: use(href="#svg-anon-icon")
+    img#seb-avatar(src="/img/seb-avatar.jpg")
 block name
-    | Json Anon
+    | Sebastian W. Friedrich
 block title 
     | Master Cray (MC)
 block roles
     | Developer of Human Resources
 block connection_links
+    a#seb-github-link(href="https://github.com/sebfried" target="_blank") 
+        svg: use(href="#svg-github-icon")
+    a#seb-linkedin-link(href="https://www.linkedin.com/in/sebastian-wolfgang-friedrich-320166119/" target="_blank")
+        svg: use(href = "#svg-linkedin-icon")
+
 block flags
     #json-flags
         .austrian-flag
