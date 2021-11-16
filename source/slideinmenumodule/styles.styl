@@ -1,0 +1,55 @@
+// slideinmenu styles
+slideinmenu-width = 260px
+burger-size = 30px
+
+#slidein-button
+    position fixed
+    top 0
+    right 0
+    z-index 4
+    padding-top 7px
+    padding-right 10px
+    padding-left 12px
+    padding-bottom 5px
+    border-bottom-left-radius: 5px
+    color cd-darkblue
+    background-color: cd-bright
+    border-left solid 2px
+    border-bottom solid 2px
+    cursor pointer
+    transition transform 0.5s
+    transform: translateY(-102%)
+    svg
+        width  burger-size
+        height burger-size
+    #close-icon
+        display none
+
+
+#slidein-button.here
+    transform: translateY(0)
+
+#slidein-button.menu-here
+    #burger-icon
+        display none
+    #close-icon
+        display block
+
+#slideinmenu
+    @extends .fuzzy-black
+    position fixed
+    top 0
+    right 0
+    z-index 3
+    height 100vh
+    width slideinmenu-width
+    box-sizing: border-box
+    padding-top: 63px
+    padding-left 35px
+    text-align left
+    transition transform 0.3s
+    transform: translateX(100%)
+
+#slideinmenu.here
+    transform: translateX(0)
+

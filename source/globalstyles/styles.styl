@@ -3,18 +3,12 @@
 /*==========================================================
 Color Theme
 ==========================================================*/
-cd-background-light = white
-cd-background-dark = black
-cd-foreground-light = white
-cd-foreground-dark = black
+cd-bright= #fff
+cd-darkblue = #024
+cd-blackbackground = #0009
 
-cd-red-light = #fff5f5
-cd-green-light = #f5fff5
-cd-blue-light = #f5f5ff
-
-cd-red-dark = #100000
-cd-green-dark = #001000
-cd-blue-dark = #000010
+cd-foreground = cd-bright
+cd-background = cd-darkblue
 
 
 /*==========================================================
@@ -30,8 +24,8 @@ element-background = #0249
 General Tag Styles
 ==========================================================*/
 body
-    background-color cd-background-dark
-    color cd-foreground-light
+    background-color cd-background
+    color cd-foreground
     font-family: Arial, Helvetica, sans-serif
     text-align: center
     font-size: 12pt
@@ -93,30 +87,26 @@ paddingless-inner-content-width = (inner-content-width + (2 * mobile-side-paddin
         padding-left: 0
         padding-right: 0
 
+.fuzzy-black
+    background-color cd-blackbackground
+    box-shadow: 0 0 1em #000
+
 
 .block
     position relative
     padding 56px 0
-    background-color white
-    color #024
+    background-color cd-bright
+    color cd-darkblue
     text-align: left
     // opacity: 0.6
     
 .black-block
+    @extends .fuzzy-black
     position relative
     padding 56px 0
-    background-color alpha(black, 0.6)
-    color white
     text-align: left
     // opacity: 0.6
-    box-shadow: 0 0 1em black
 
-.blue-block
-    padding 56px 0
-    background-color #024
-    color white
-    text-align: left
-    // opacity: 0.97
 
 .one-line-centered-block
         p   

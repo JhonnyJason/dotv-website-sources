@@ -11,8 +11,11 @@ indexdomconnect.initialize = () ->
     global.ethereumAddress = document.getElementById("ethereum-address")
     global.copyIbanAddressButton = document.getElementById("copy-iban-address-button")
     global.ibanAddress = document.getElementById("iban-address")
+    global.menu = document.getElementById("menu")
     global.messagebox = document.getElementById("messagebox")
     global.upbuttonContainer = document.getElementById("upbutton-container")
+    global.slideinButton = document.getElementById("slidein-button")
+    global.slideinmenu = document.getElementById("slideinmenu")
     global.backgroundimage = document.getElementById("backgroundimage")
     global.backgroundlogo = document.getElementById("backgroundlogo")
     return

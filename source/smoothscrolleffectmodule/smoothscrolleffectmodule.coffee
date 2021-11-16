@@ -12,6 +12,8 @@ print = (arg) -> console.log(arg)
 ############################################################
 v = null
 headerHeight = 0
+
+slideinMenu = null
 upButton = null
 
 offsetForFooter = 0
@@ -22,7 +24,9 @@ footerShown = false
 smoothscrolleffectmodule.initialize = () ->
     log "smoothscrolleffectmodule.initialize"
     v = allModules.vanillautilmodule
+    slideinMenu = allModules.slideinmenumodule
     upButton = allModules.upbuttonmodule
+
     allLinks = document.getElementsByTagName("a")
     for link,i in allLinks
         ref = link.getAttribute("href")
@@ -60,8 +64,12 @@ addScrollEffect = (link, anchorname) ->
 #region eventListeners
 weScrolled = (evt) ->
     offset = window.scrollY
-    if offset > 500 then upButton.show()
-    else upButton.hide()
+    if offset > 500
+        upButton.show()
+        slideinMenu.show()
+    else 
+        upButton.hide()
+        slideinMenu.hide()
 
     if !footerShown and offset > offsetForFooter
         backgroundimage.classList.add("footer")
