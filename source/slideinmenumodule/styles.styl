@@ -7,27 +7,38 @@ burger-size = 30px
     top 0
     right 0
     z-index 4
-    padding-top 7px
-    padding-right 10px
-    padding-left 12px
-    padding-bottom 5px
-    border-bottom-left-radius: 5px
+    width 60px
+    height 60px
     color cd-darkblue
-    background-color: cd-bright
-    border-left solid 2px
-    border-bottom solid 2px
     cursor pointer
     transition transform 0.5s
-    transform: translateY(-102%)
+    transform: translate(102%, -102%)
     svg
         width  burger-size
         height burger-size
+    #menu-icons
+        position absolute
+        top 0
+        right 0
+        padding-top 7px
+        padding-right 10px
+
     #close-icon
         display none
 
 
+#button-background
+    position absolute
+    bottom 0
+    left 0
+    background-color: cd-bright
+    border-bottom solid 2px
+    height 120px
+    width 120px
+    transform rotate(45deg)
+
 #slidein-button.here
-    transform: translateY(0)
+    transform: translate(0, 0)
 
 #slidein-button.menu-here
     #burger-icon
