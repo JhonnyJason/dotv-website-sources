@@ -1,0 +1,18 @@
+mixin developer(name, nick, title, imgurl)
+  .d-block
+    div
+      h1 #{name} aka #{nick}
+      h2=title
+    img(class='round')
+      
+  block
+
+mixin ghrepo(slug, info)
+  .d-block
+    svg(): use(href="#svg-github-icon")
+    div
+      h1=slug
+      if block
+        block
+      else
+        h2=info
