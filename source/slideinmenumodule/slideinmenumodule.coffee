@@ -11,12 +11,15 @@ print = (arg) -> console.log(arg)
 
 
 ############################################################
+slideinButton = null
+
 menuIsHere = false
 hidden = true
 
 ############################################################
 slideinmenumodule.initialize = ->
     log "slideinmenumodule.initialize"
+    slideinButton = document.getElementById("slidein-button")
     slideinButton.addEventListener("click", toggleMenuHere)
     return
 

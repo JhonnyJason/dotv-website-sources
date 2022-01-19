@@ -9,23 +9,24 @@ Global Styles
 @import '../globalstyles/styles.styl'
 
 /*====================================================================
-Including other components
+Including Modules
 ====================================================================*/
 @import '../allmodules/allstyles.styl'
 
-@import 'components/background/background.styl'
-@import 'components/menuheader/menuheader.styl'
+/*====================================================================
+Including Components
+====================================================================*/
 @import 'components/mission/mission.styl'
 @import 'components/company/company.styl'
 @import 'components/code/code.styl'
-@import 'components/footer/footer.styl'
 
 
-header
-    position relative
-    height calc(100vh - 87px)
-    @extends .max-content
-    // z-index 2
+#home-link
+    color chosen-link-color
+    pointer-events: none
+
+#backgroundimage
+    background-image: url(/img/footer-bg-index.jpg)
 
 main
     width 100%
@@ -33,12 +34,4 @@ main
     padding 0
     margin 0
     // margin-top calc(100vh - 100px)
-    // z-index 2
-
-footer
-    width 100%
-    position relative
-    height calc(100vh - 87px)
-    padding 0
-    margin 0
     // z-index 2

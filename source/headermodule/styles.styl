@@ -9,7 +9,27 @@ menu-padding = 21px
     height inherit
     overflow hidden
 
-#menu
+#site-menu
+    @extends .fuzzy-black
+    display flex
+    justify-content: space-around
+    padding 7px 0 20px 0
+    border-radius: 0 0 40% 40%
+
+#site-menu > *
+    margin-bottom 5px
+    vertical-align: middle
+
+#home-icon
+    width 35px
+    height 35px
+    margin-right 7px
+    
+#home-link > a
+    display: flex
+    justify-content: center
+
+#header-anchor-links
     text-align: right
     padding-top menu-padding
     padding-right 15px
@@ -35,3 +55,12 @@ menu-padding = 21px
         width connect-icon-size
         height connect-icon-size
 
+header
+    position relative
+    height calc(100vh - 87px)
+    @extends .max-content
+    // z-index 2
+
+@media screen and (max-width: 500px)
+    #site-menu
+        flex-direction: column

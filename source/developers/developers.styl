@@ -9,16 +9,29 @@ Global Styles
 @import '../globalstyles/styles.styl'
 
 /*====================================================================
-Including other components
+Including modules
 ====================================================================*/
 @import '../allmodules/allstyles.styl'
 
-@import 'components/mixin-developers/mixin-developers.styl'
+/*====================================================================
+Including components
+====================================================================*/
+@import 'components/developers/developers.styl'
+@import 'components/people/people.styl'
+@import 'components/managers/managers.styl'
 
-@import '../index/index.styl'
 
-.really-big
-  font-size: 2.5em
+#developers-link
+    color chosen-link-color
+    pointer-events: none
 
-.d-section
-  padding: 0 8em
+#backgroundimage
+    background-image: url(/img/footer-bg-developers.jpg)
+
+main
+    width 100%
+    position relative
+    padding 0
+    margin 0
+    // margin-top calc(100vh - 100px)
+    // z-index 2

@@ -1,21 +1,10 @@
 include ../svgiconsmodule/svgicons.pug
-include ../index/components/background/background.pug
-include ../slideinmenumodule/slideinmenu.pug
+include ../backgroundmodule/background.pug
+
+
+include components/developersslideinmenu.pug
+include components/developersheader.pug
+include components/developersmain.pug
+include ../footermodule/footer.pug
+
 include ../upbuttonmodule/upbutton.pug
-include ../messageboxmodule/messagebox.pug
-
-include components/mixin-developers/mixin-developers.pug
-
-header
-    include ../index/components/menuheader/menuheader.pug
-main
-  h1.really-big Developers
-
-  .d-section
-    +developer('Maciej Krüger', 'mkg20001', 'Hardware and software "Mad Scientist"')
-      .repos
-        +ghrepo('freifunk-gluon/gluon', 'OLSR Support')
-        +ghrepo('nixos/nixpkgs', 'Package maintaince, cinnamon desktop')
-
-footer
-    include ../index/components/footer/footer.pug
