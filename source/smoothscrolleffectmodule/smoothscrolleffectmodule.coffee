@@ -52,11 +52,10 @@ getAnchorName = (ref) ->
 
 addScrollEffect = (link, anchorname) ->
     # olog {link,anchorname}
-    switch(anchorname)
-        when "company" then link.addEventListener("click", scrollToCompany)
-        when "mission" then link.addEventListener("click", scrollToMission)
-        when "code" then link.addEventListener("click", scrollToCode)
-        else log "unknown anchorname: " + anchorname
+    el = document.getElementById(anchorname)
+    return unless el?
+    scrollFunction = -> v.scrollTo(el.offsetTop+headerHeight)
+    link.addEventListener("click", scrollFunction)
     return
 
 
@@ -76,22 +75,6 @@ weScrolled = (evt) ->
         footerShown = true
     return
 
-############################################################
-scrollToCompany = (evt) ->
-    # log company.offsetTop
-    v.scrollTo(company.offsetTop+headerHeight)
-    return
-
-scrollToMission = (evt) ->
-    # log mission.offsetTop
-    # realoffset = mission.offsetTop - 
-    v.scrollTo(mission.offsetTop+headerHeight)
-    return
-
-scrollToCode = (evt) ->
-    # log code.offsetTop
-    v.scrollTo(code.offsetTop+headerHeight)
-    return
 #endregion
 
 module.exports = smoothscrolleffectmodule

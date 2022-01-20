@@ -1,0 +1,20 @@
+extends ../cardbases/personbase.pug 
+block picture
+    //- img#klaus-avatar(src="/img/klaus-avatar.jpg")
+    img#klaus-avatar(src="/img/avatar2-bg.jpg")
+block name
+    | Klaus Salmutter
+block title 
+    | Welten Meister
+block roles
+    | Multiplikator
+block connection_links
+    a#klaus-instagram-link(href="https://www.instagram.com/salmutterklaus/" target="_blank")
+            svg: use(href="#svg-instagram-icon")
+block flags
+    #gson-flags
+        .austrian-flag
+            .austrian-red
+            .white-strip
+            .austrian-red
+
