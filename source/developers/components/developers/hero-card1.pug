@@ -1,0 +1,14 @@
+extends ../cardbases/herobase.pug
+include ../cardbases/person-info-mixin.pug
+include repo-mixins.pug 
+
+block avatar
+    img#maciej-avatar(src="/img/maciej-avatar.jpg" alt="Hero Avatar of Maciej")
+block hero
+    +info('Maciej Krüger', 'mkg20001', 'Hardware and Software', '"MAD Scientist"')
+
+block repositories
+    a(href="https://github.com/freifunk-gluon/gluon" target="_blank")
+        +ghrepo('freifunk-gluon/gluon', 'OLSR Support')
+    a(href="https://github.com/nixos/nixpkgs" target="_blank")
+        +ghrepo('nixos/nixpkgs', 'Package maintaince, cinnamon desktop')

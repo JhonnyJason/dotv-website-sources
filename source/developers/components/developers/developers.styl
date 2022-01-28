@@ -1,7 +1,17 @@
-@import 'mixin-developers/mixin-developers.styl'
-
-.really-big
-    font-size: 2.5em
-
-.developer-card
-    padding: 0 8em
+.hero-card
+    @extends .developer-card
+    .main-content-block
+        justify-content: space-between
+.repo
+    @extends .main-content-block
+    margin-left: auto
+    max-width: 600px
+    h3
+        margin-bottom 20px
+    p 
+        margin-bottom 0
+    svg
+        padding 30px
+        width 70px
+        height 70px
+        // margin-left: auto

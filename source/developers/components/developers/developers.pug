@@ -1,16 +1,10 @@
 section#developers
-include mixin-developers/mixin-developers.pug
+    .black-block
+        .max-content
+            h1 FOSS Developers
+            p Allmighty heroes - sponsored by .V
+    .block 
+        .max-content
+            include hero-card1.pug 
 
-.black-block
-    .max-content
-        h1 FOSS Developers
-        p Allmighty heroes - sponsored by .V
-.block 
-    .max-content
-        .developer-card
-            +developer('Maciej Krüger', 'mkg20001', 'Hardware and software "MAD Scientist"')
-            .repos
-                +ghrepo('freifunk-gluon/gluon', 'OLSR Support')
-                +ghrepo('nixos/nixpkgs', 'Package maintaince, cinnamon desktop')
-
-.gap
+    .gap

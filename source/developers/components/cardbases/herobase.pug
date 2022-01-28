@@ -1,35 +1,10 @@
-.developer-card
+.hero-card
     .main-content-block
         .avatar
-            block picture 
+            block avatar 
         .middle-block
-            h3 
-                block name
-            p 
-                block title
-                
-            p 
-                block roles
+            block hero
         .right-block
-            block connection_links
-    .flags-line
-        block flags
-
-mixin developer(name, nick, subtitle, imgurl)
-    .d-block
-        div
-            h2 #{name} aka #{nick}
-            h3=subtitle
-        img(class='round')
-      
-    block
-
-mixin ghrepo(slug, info)
-  .d-block
-    svg(): use(href="#svg-github-icon")
-    div
-      h1=slug
-      if block
-        block
-      else
-        h2=info
+            block connection_links 
+    .hero-repositories
+        block repositories

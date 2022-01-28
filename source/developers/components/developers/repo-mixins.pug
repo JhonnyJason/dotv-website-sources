@@ -1,0 +1,7 @@
+mixin ghrepo(slug, info)
+    .repo
+        svg(): use(href="#svg-github-icon")
+        .repo-info
+            h3=slug
+            p=info
+        //- svg(): use(href="#svg-github-icon")
