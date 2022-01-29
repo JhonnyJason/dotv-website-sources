@@ -1,0 +1,17 @@
+extends ../cardbases/personbase.pug 
+block picture
+    img#scarlett-avatar(src="/img/scarlett-avatar.jpg")
+block name
+    | 丁翠蝴 (Scarlett)
+block title 
+    | Ruling Queen
+block roles
+    | Communicator / Motivator
+block connection_links
+    a#scarlett-linkedin-link(href="https://www.linkedin.com/in/%E7%BF%A0%E8%9D%B4-%E4%B8%81-b92151210/" target="_blank")
+        svg: use(href = "#svg-linkedin-icon")
+    
+block flags
+    #scarlett-flags
+        svg.chinese-flag: use(href="#svg-china-flag-icon")                    
+        

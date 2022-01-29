@@ -13,6 +13,7 @@ indexdomconnect.initialize = () ->
     global.ibanAddress = document.getElementById("iban-address")
     global.backgroundimage = document.getElementById("backgroundimage")
     global.backgroundlogo = document.getElementById("backgroundlogo")
+    global.s = document.getElementById("s")
     return
     
 module.exports = indexdomconnect

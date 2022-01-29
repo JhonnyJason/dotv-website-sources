@@ -1,7 +1,7 @@
-developersdomconnect = {name: "developersdomconnect"}
+projectsdomconnect = {name: "projectsdomconnect"}
 
 ############################################################
-developersdomconnect.initialize = () ->
+projectsdomconnect.initialize = () ->
     global.upbuttonContainer = document.getElementById("upbutton-container")
     global.upbutton = document.getElementById("upbutton")
     global.backgroundimage = document.getElementById("backgroundimage")
@@ -9,4 +9,4 @@ developersdomconnect.initialize = () ->
     global.s = document.getElementById("s")
     return
     
-module.exports = developersdomconnect
+module.exports = projectsdomconnect

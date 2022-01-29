@@ -178,7 +178,17 @@ svg#svgicon-symbols
 
     symbol#svg-share-icon(preserveAspectRatio="xMidYMid meet" viewBox='0 0 24 24')
         path(fill='currentColor' d='M21,12L14,5V9C7,10 4,15 3,20C5.5,16.5 9,14.9 14,14.9V19L21,12Z')
-    
+
+    symbol#svg-china-flag-icon(preserveAspectRatio="xMidYMid meet" viewBox="0 0 30 20")
+        defs
+            path#s(d="M0,-1 0.587785,0.809017 -0.951057,-0.309017H0.951057L-0.587785,0.809017z" fill="#FFFF00")
+        rect(width="30" height="20" fill="#EE1C25")
+        use(href="#s" transform="translate(5,5) scale(3)")
+        use(href="#s" transform="translate(10,2) rotate(23.036243)")
+        use(href="#s" transform="translate(12,4) rotate(45.869898)")
+        use(href="#s" transform="translate(12,7) rotate(69.945396)")
+        use(href="#s" transform="translate(10,9) rotate(20.659808)")
+
     symbol#svg-swiss-flag-icon(preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32")
         rect(x="0" y="0" height="32" width="32" fill="red")
         path(d="m13 6h6v7h7v6h-7v7h-6v-7h-7v-6h7z", fill="#fff")                    
