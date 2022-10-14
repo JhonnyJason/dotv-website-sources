@@ -15,18 +15,33 @@ section#company
                     .black-strip 
                     .white-strip
 
-    .block
-        .max-content
-            h2#availability-indicator.available Available
-            p We are happy to inform you that we have free ressources available to take in <b>two</b> new clients.
-            //- p We are happy to inform you that we have free ressources available to take in <b>one</b> new client.
-            //- h2#availability-indicator.booked Booked
-            //- p Unfortunately we are booked out right now and will not take in any new client for now. Any new request will most likely experience a delayed response.
-            //- #availability-face :-)
-
     //- .block
     //-     .max-content
     //-         p.todo // TODO: Add visualized information
 
+    .block
+        .max-content
+            h2#availability-indicator.available Available
+            
+            //- Totally free
+            //- p We are happy to inform you that we are completely free right now and thus may take on clients with huge projects.
+            //- svg#availability-calendar: use(href="#svg-calendar-free-icon")
+
+            //- 3 free
+            //- p We are happy to inform you that we many have free ressources available to take in <b>three</b> new clients.
+            //- svg#availability-calendar: use(href="#svg-calendar-3free-icon")
+
+            //- 2 free
+            p We are happy to inform you that we have free ressources available to take in <b>two</b> new clients.
+            svg#availability-calendar: use(href="#svg-calendar-2free-icon")
+            
+            //- 1 free 
+            //- p We are happy to inform you that we have free ressources available to take in <b>one</b> new client.
+            //- svg#availability-calendar: use(href="#svg-calendar-1free-icon")
+            
+            //- //- Totally booked
+            //- h2#availability-indicator.booked Booked
+            //- p Unfortunately we are booked out right now and will not take in any new client for now. Any new request will most likely experience a delayed response.
+            //- svg#availability-calendar: use(href="#svg-calendar-booked-icon")
             
     .gap
