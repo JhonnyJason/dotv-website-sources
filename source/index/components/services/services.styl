@@ -23,12 +23,22 @@
     #platform-decoration
         height 400px
 
-@media  screen and (max-width: 830px) 
-    .service-decoration
-        display: block
-        position relative
-        top 0
-        left 0
-        transform: none
-        margin auto
-        margin-bottom 50px
+@media  screen and (max-width: decoration-maximum-mobile-width) 
+    #services
+        .service-decoration
+            display: block
+            position relative
+            top 0
+            left 0
+            width: 100vw
+            padding 50px
+            box-sizing: border-box
+            transform: none
+            margin auto
+            margin-bottom 50px
+            background-color cd-darkblue
+            color white
+        #assistance-decoration
+            height 100vw
+            width 100vw
+            padding 30px
