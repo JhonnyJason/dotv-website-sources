@@ -12,7 +12,7 @@ print = (arg) -> console.log(arg)
 msgBox = null
 
 ############################################################
-utilmodule.initialize = () ->
+utilmodule.initialize = ->
     log "utilmodule.initialize"
     msgBox = allModules.messageboxmodule
     return
