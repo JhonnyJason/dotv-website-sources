@@ -1,26 +1,25 @@
-upbuttonmodule = {name: "upbuttonmodule"}
 ############################################################
-#region printLogFunctions
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["upbuttonmodule"]?  then console.log "[upbuttonmodule]: " + arg
-    return
-ostr = (obj) -> JSON.stringify(obj, null, 4)
-olog = (obj) -> log "\n" + ostr(obj)
-print = (arg) -> console.log(arg)
+#region debug
+import { createLogFunctions } from "thingy-debug"
+{log, olog} = createLogFunctions("upbuttonmodule")
 #endregion
 
 ############################################################
-v = null
+import * as v from "./vanillautilmodule.js"
 
+############################################################
+#region internal variables
 timerID = 0
 timeoutMS = 1000
 
+############################################################
 shown  = false
 
+#endregion
+
 ############################################################
-upbuttonmodule.initialize = () ->
-    log "upbuttonmodule.initialize"
-    v = allModules.vanillautilmodule
+export initialize = ->
+    log "initialize"
     upbutton.addEventListener("click", scrollToTop)
     return
     
@@ -37,16 +36,14 @@ clearBackground = ->
     return
 
 ############################################################
-upbuttonmodule.show = ->
+export show = ->
     return if shown
     upbuttonContainer.classList.add("here")
     shown = true
     return
 
-upbuttonmodule.hide = ->
+export hide = ->
     return unless shown
     upbuttonContainer.classList.remove("here")
     shown = false
     return
-
-module.exports = upbuttonmodule

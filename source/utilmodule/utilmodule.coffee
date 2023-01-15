@@ -1,24 +1,14 @@
-utilmodule = {name: "utilmodule"}
 ############################################################
-#region printLogFunctions
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["utilmodule"]?  then console.log "[utilmodule]: " + arg
-    return
-ostr = (obj) -> JSON.stringify(obj, null, 4)
-olog = (obj) -> log "\n" + ostr(obj)
-print = (arg) -> console.log(arg)
+#region debug
+import { createLogFunctions } from "thingy-debug"
+{log, olog} = createLogFunctions("backgroundmodule")
 #endregion
 
-msgBox = null
+############################################################
+import * as msgBox from "./messageboxmodule.js"
 
 ############################################################
-utilmodule.initialize = ->
-    log "utilmodule.initialize"
-    msgBox = allModules.messageboxmodule
-    return
-
-############################################################
-utilmodule.copyToClipboard = (text) ->
+export copyToClipboard = (text) ->
     try 
         await navigator.clipboard.writeText(text)
         log "Clipboard API succeeded"
@@ -47,6 +37,3 @@ utilmodule.copyToClipboard = (text) ->
     document.body.removeChild(copyElement)
     if msgBox? then msgBox.info("Copied: "+text)
     return
-
-
-module.exports = utilmodule

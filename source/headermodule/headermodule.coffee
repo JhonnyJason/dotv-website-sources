@@ -1,17 +1,10 @@
-headermodule = {name: "headermodule"}
 ############################################################
-#region printLogFunctions
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["headermodule"]?  then console.log "[headermodule]: " + arg
-    return
-ostr = (obj) -> JSON.stringify(obj, null, 4)
-olog = (obj) -> log "\n" + ostr(obj)
-print = (arg) -> console.log(arg)
+#region debug
+import { createLogFunctions } from "thingy-debug"
+{log, olog} = createLogFunctions("headermodule")
 #endregion
 
 ############################################################
-headermodule.initialize = () ->
-    log "headermodule.initialize"
-    return
-    
-module.exports = headermodule
+export initialize = () ->
+    log "initialize"
+    return    

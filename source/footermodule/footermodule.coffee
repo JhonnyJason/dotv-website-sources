@@ -1,17 +1,11 @@
-footermodule = {name: "footermodule"}
 ############################################################
-#region printLogFunctions
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["footermodule"]?  then console.log "[footermodule]: " + arg
-    return
-ostr = (obj) -> JSON.stringify(obj, null, 4)
-olog = (obj) -> log "\n" + ostr(obj)
-print = (arg) -> console.log(arg)
+#region debug
+import { createLogFunctions } from "thingy-debug"
+{log, olog} = createLogFunctions("footermodule")
 #endregion
 
 ############################################################
-footermodule.initialize = ->
-    log "footermodule.initialize"
+export initialize = ->
+    log "initialize"
     return
     
-module.exports = footermodule

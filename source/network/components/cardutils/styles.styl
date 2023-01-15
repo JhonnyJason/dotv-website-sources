@@ -1,0 +1,120 @@
+/*====================================================================
+hero card styles
+====================================================================*/
+.person-card
+    background-color: #024
+    color cd-foreground
+    padding 20px
+    border-radius: 3px
+    box-shadow: 0 0 15px #024
+    margin-bottom 80px
+
+.main-content-block
+    display flex
+    margin-bottom 20px
+    flex-wrap: wrap
+    align-items: center
+
+.avatar
+    flex-shrink: 0
+    border-radius: 50%
+    width: 200px
+    height 200px
+    overflow: hidden        
+    border solid 3px #ffffff22
+    align-self: flex-start
+    img
+        width inherit
+
+.middle-block
+    flex-shrink: 0
+    text-align right
+    margin-left: 60px
+    width: 220px
+
+.right-block
+    margin-left auto
+    margin-top auto
+    text-align: right
+    position relative
+    a
+        text-decoration: none
+        margin-right 7px
+    svg
+        width 50px
+        height 50px
+
+/*====================================================================
+hero card styles
+====================================================================*/
+.hero-card
+    @extends .person-card
+    .main-content-block
+        justify-content: space-between
+        max-width: 600px
+        margin auto
+        margin-bottom 20px
+        margin-top: 20px
+        flex-wrap: nowrap
+        padding 0 15px
+
+    .top-block
+        background-color: white
+        color cd-darkblue
+        border-radius: 3px
+        padding 10px 0
+
+    .avatar
+        border: solid 3px cd-darkblue
+/*====================================================================
+repo mixin styles
+====================================================================*/
+.repo
+    // background-color: #999
+    // background-color: black
+    // color white
+    display flex
+    align-items: center
+    margin: auto
+    max-width: 600px
+    margin 20px 0
+    padding-left 20%
+    h3
+        margin-bottom 20px
+    p 
+        margin-bottom 0
+    svg
+        flex-shrink: 0
+        padding 20px
+        width 70px
+        height 70px
+        // margin-left: auto
+
+/*====================================================================
+mobile styles
+====================================================================*/
+@media screen and (max-width: 570px)
+    .repo
+        text-align: center
+        margin-left: 0
+        // border-top solid 2px cd-darkblue
+        flex-direction: column
+        padding-left: 0
+    .main-content-block
+        flex-direction column
+    .avatar
+        margin auto
+        margin-bottom 30px
+    .middle-block
+        text-align: center
+        margin auto 
+
+    .right-block
+        text-align: center
+        margin-left: 0
+    
+    .flags-line
+        width: 100%
+
+
+

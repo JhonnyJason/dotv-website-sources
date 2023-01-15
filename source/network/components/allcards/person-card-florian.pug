@@ -1,4 +1,4 @@
-extends ../cardbases/personbase.pug 
+extends ../cardutils/personbase.pug 
 block picture
     img#flo-avatar(src="/img/flo-avatar.jpg")
 block name
@@ -15,7 +15,7 @@ block connection_links
     a#flo-instagram-link(href="https://www.instagram.com/paranoid_nakamoto/" target="_blank")
             svg: use(href="#svg-instagram-icon")
 block flags
-    #gson-flags
+    #florian-flags
         .austrian-flag
             .austrian-red
             .white-strip

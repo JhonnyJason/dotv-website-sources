@@ -1,9 +1,11 @@
-debugmodule = {name: "debugmodule", uimodule: false}
+import { addModulesToDebug } from "thingy-debug"
 
 ############################################################
-debugmodule.modulesToDebug = 
-    unbreaker: true
+export modulesToDebug = {
+
     # configmodule: true
     smoothscrolleffectmodule: true
 
-export default debugmodule
+}
+
+addModulesToDebug(modulesToDebug)

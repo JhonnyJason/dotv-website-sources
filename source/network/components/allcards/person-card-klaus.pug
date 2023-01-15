@@ -1,4 +1,4 @@
-extends ../cardbases/personbase.pug 
+extends ../cardutils/personbase.pug 
 block picture
     img#klaus-avatar(src="/img/klaus-avatar.jpg")
     //- img#klaus-avatar(src="/img/avatar2-bg.jpg")
@@ -9,10 +9,10 @@ block title
 block roles
     | Multiplikator
 block connection_links
-    a#klaus-instagram-link(href="https://www.instagram.com/salmutterklaus/" target="_blank")
+    a#klaus-instagram-link(href="https://www.instagram.com/klaussalmutter/" target="_blank")
             svg: use(href="#svg-instagram-icon")
 block flags
-    #gson-flags
+    #klaus-flags
         .austrian-flag
             .austrian-red
             .white-strip

@@ -1,28 +1,29 @@
-smoothscrolleffectmodule = {name: "smoothscrolleffectmodule"}
 ############################################################
-#region printLogFunctions
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["smoothscrolleffectmodule"]?  then console.log "[smoothscrolleffectmodule]: " + arg
-    return
-ostr = (obj) -> JSON.stringify(obj, null, 4)
-olog = (obj) -> log "\n" + ostr(obj)
-print = (arg) -> console.log(arg)
+#region debug
+import { createLogFunctions } from "thingy-debug"
+{log, olog} = createLogFunctions("smoothscrolleffectmodule")
 #endregion
 
 ############################################################
-v = null
+import *  as v from "./vanillautilmodule.js"
+
+############################################################
+#region internal variables
 headerHeight = 0
 
+############################################################
 slideinMenu = null
 upButton = null
 
+############################################################
 offsetForFooter = 0
 footerShown = false
 
+#endregion
 
 ############################################################
-smoothscrolleffectmodule.initialize = () ->
-    log "smoothscrolleffectmodule.initialize"
+export initialize = ->
+    log "initialize"
     v = allModules.vanillautilmodule
     slideinMenu = allModules.slideinmenumodule
     upButton = allModules.upbuttonmodule
@@ -40,6 +41,7 @@ smoothscrolleffectmodule.initialize = () ->
     return
     
 ############################################################
+#region internal functions
 getHeaderHeight = ->
     main = document.getElementsByTagName("header")[0]
     headerHeight = main.offsetHeight
@@ -60,7 +62,6 @@ addScrollEffect = (link, anchorname) ->
 
 
 ############################################################
-#region eventListeners
 weScrolled = (evt) ->
     offset = window.scrollY
     if offset > 500
@@ -76,5 +77,3 @@ weScrolled = (evt) ->
     return
 
 #endregion
-
-module.exports = smoothscrolleffectmodule

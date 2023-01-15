@@ -1,23 +1,21 @@
-slideinmenumodule = {name: "slideinmenumodule"}
 ############################################################
-#region printLogFunctions
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["slideinmenumodule"]?  then console.log "[slideinmenumodule]: " + arg
-    return
-ostr = (obj) -> JSON.stringify(obj, null, 4)
-olog = (obj) -> log "\n" + ostr(obj)
-print = (arg) -> console.log(arg)
+#region debug
+import { createLogFunctions } from "thingy-debug"
+{log, olog} = createLogFunctions("slideinmenumodule")
 #endregion
 
-
 ############################################################
+#region internalVariables
 slideinButton = null
 
+############################################################
 menuIsHere = false
 hidden = true
 
+#endregion
+
 ############################################################
-slideinmenumodule.initialize = ->
+export initialize = ->
     log "slideinmenumodule.initialize"
     slideinButton = document.getElementById("slidein-button")
     slideinButton.addEventListener("click", toggleMenuHere)
@@ -36,7 +34,7 @@ toggleMenuHere = ->
     return
 
 ############################################################
-slideinmenumodule.hide = ->
+export hide = ->
     return if hidden
     slideinButton.classList.remove("here")
     slideinButton.classList.remove("menu-here")
@@ -46,7 +44,7 @@ slideinmenumodule.hide = ->
     return
 
 ############################################################
-slideinmenumodule.show = ->
+export show = ->
     return unless hidden
     slideinButton.classList.add("here")
     slideinButton.classList.remove("menu-here")
@@ -54,5 +52,3 @@ slideinmenumodule.show = ->
     menuIsHere = false
     hidden = false
     return
-
-module.exports = slideinmenumodule
