@@ -49,6 +49,7 @@ getHeaderHeight = ->
 
 getAnchorName = (ref) ->
     # log ref
+    return unless ref?
     if ref[0] == '#' then return ref.slice(1)
     return
 

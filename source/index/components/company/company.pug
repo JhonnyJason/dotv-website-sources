@@ -19,10 +19,11 @@ section#company
                     li: a(href="/doc/dotv-terms-of-service.pdf" target="_blank") § Terms of Service >
                     li: a(href="/doc/dotv-dataprotection.pdf" target="_blank") § Dataprotection >
                     li: a(href="/doc/dotv-aml-policy.pdf" target="_blank") § AML Policy >
+    //- include ../../../destraightenmodule/top-white-on-black.pug
     //- .block
     //-     .max-content
     //-         p.todo // TODO: Add visualized information
-
+    include ../../../destraightenmodule/top-white-on-black.pug
     .block
         .max-content
             h2#availability-indicator.available Available
@@ -41,11 +42,18 @@ section#company
             
             //- 1 free 
             p We are happy to inform you that we have free ressources available to take in <b>one</b> new client.
+     
+            //- always here on booked
+            p  Contact us <a id="email-link"> here </a>
+            p#contact-hint Hint: click twice
+
             svg#availability-calendar: use(href="#svg-calendar-1free-icon")
             
             //- //- Totally booked
             //- h2#availability-indicator.booked Booked
             //- p Unfortunately we are booked out right now and will not take in any new client for now. Any new request will most likely experience a delayed response.
             //- svg#availability-calendar: use(href="#svg-calendar-booked-icon")
-            
+
+    include ../../../destraightenmodule/bottom-white-on-black.pug    
+    .black-block
     .gap

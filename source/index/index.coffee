@@ -5,7 +5,26 @@ domconnect.initialize()
 global.allModules = Modules
 
 ############################################################
-appStartup = -> return
+emailLink = document.getElementById("email-link")
+linkSet = false
+
+############################################################
+createEmailLink = (evnt) ->
+    if linkSet then return true
+    else evnt.preventDefault()
+    domain = "dotv"
+    tld = "ee"
+    nameY = "con"
+    nameX = "tact"
+    href = "mailto:"+nameY+nameX+"@"+domain+"."+tld
+    emailLink.setAttribute("href", href)
+    linkSet = true
+    return
+
+############################################################
+appStartup = -> 
+    emailLink.addEventListener("click", createEmailLink)
+    return
 
 ############################################################
 run = ->
