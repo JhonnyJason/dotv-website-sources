@@ -1,11 +1,11 @@
 .destraighten-black
     display grid
-    grid-template-columns: minmax(0, auto) minmax(40%, max-content-width) minmax(0, auto)
+    grid-template-columns: 15px auto 15px
     background-color: cd-blackbackground
 
 .destraighten-transparent
     display grid
-    grid-template-columns: minmax(0, auto) minmax(40%, max-content-width) minmax(0, auto)
+    grid-template-columns: 15px auto 15px
     background-color: transparent
 
 
@@ -46,3 +46,10 @@
 .transparent-block-50
 .transparent-block-100
     background-color transparent
+
+@media screen and (min-width: paddingless-inner-content-width)
+    .destraighten-black
+        grid-template-columns: auto max-content-width auto
+
+    .destraighten-transparent
+        grid-template-columns: auto max-content-width auto

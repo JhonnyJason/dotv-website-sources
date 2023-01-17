@@ -16,8 +16,10 @@ createEmailLink = (evnt) ->
     tld = "ee"
     nameY = "con"
     nameX = "tact"
-    href = "mailto:"+nameY+nameX+"@"+domain+"."+tld
+    mailAddress = nameY+nameX+"@"+domain+"."+tld
+    href = "mailto:"+mailAddress
     emailLink.setAttribute("href", href)
+    emailLink.textContent = "here: "+mailAddress
     linkSet = true
     return
 

@@ -54,7 +54,7 @@ section#values
     .gap
         p We are not legion, we do forgive.<br>
             | But we never forget.
-    include ../../../destraightenmodule/top-white-on-transparent-inverted.pug
+    //- include ../../../destraightenmodule/top-white-on-transparent-inverted.pug
     .block
         svg.value-decoration: use(href="#svg-science-icon")
         .max-content
@@ -74,13 +74,14 @@ section#values
             p We acknowledge and admit again and again:<br>
                 | <b>We are biased</b>.
         
-    include ../../../destraightenmodule/bottom-white-on-transparent-inverted.pug
+    //- include ../../../destraightenmodule/bottom-white-on-transparent-inverted.pug
     //- .small-gap
-    .small-gap
+    //- .small-gap
     //- include ../../../destraightenmodule/top-white-on-transparent-inverted.pug
-    //- .gap
+    .gap
+        svg#post-science-roots: use(href="#svg-tree-roots")
 
-    include ../../../destraightenmodule/top-white-on-transparent.pug
+    include ../../../destraightenmodule/top-white-on-transparent-inverted.pug
     .block
         svg.value-decoration: use(href="#svg-reason-icon")
         .max-content
@@ -120,26 +121,3 @@ section#values
 
     include ../../../destraightenmodule/bottom-white-on-transparent.pug
     .gap 
-
-    include ../../../destraightenmodule/top-white-on-transparent.pug
-    .block
-        svg#foss-decoration.value-decoration: use(href="#svg-foss-graphic")
-        .max-content
-            h2 FOSS
-            p We see ourselves as free developers.<br>
-                | Most software should be free and open source software.
-            p <b>Information has no ownership.</b>
-
-            p Decentralization, permissionlessness, transparancy and ownership are keys to a fair and free society.<br> 
-            p Collectivly we solve problems and the solution belongs to everyone.<br>
-
-            p <b>We empower people.</b>
-
-
-            p Being dependent on a proprietary construct or system which we cannot simply change or switch is a very precarious situation. And so much we are in that, we need to navigate our ways to get out of it. At best we avoid it in beforehand.
-
-            p <b>This is not a given and we can do much better.</b>
-
-    include ../../../destraightenmodule/bottom-white-on-black.pug
-    .black-block
-    .gap
